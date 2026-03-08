@@ -1,5 +1,5 @@
 # Phase Screenshots
-Live Link: https://hamidjae.github.io/is120-hw8-hamidjaeyoung-jahangir/
+Live Link: [https://hamidjae.github.io/is120-hw8-hamidjaeyoung-jahangir/](https://hamidjae.github.io/is120-hw8-hamidjaeyoung-jahangir/)
 ![Animation step 1](public/part1.png)
 ![Animation step 2](public/part2.png)
 ![Animation step 2](public/part3.png)
