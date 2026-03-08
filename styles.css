@@ -1,0 +1,80 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.scene{
+    position:relative;
+    width:200px;
+    height:200px;
+}
+
+.corner{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100px;
+    height:100px;
+    background-repeat:no-repeat;
+}
+
+.left{
+    background:
+        linear-gradient(black) top left / 100px 20px no-repeat,
+        linear-gradient(black) top left / 20px 100px no-repeat;
+    animation:leftMove 1s forwards;
+    clip-path: polygon(0 0, 100% 0, 60% 50%, 100% 100%, 0 100%);
+}
+
+.right{
+    background:
+        linear-gradient(black) bottom right / 100px 20px no-repeat,
+        linear-gradient(black) bottom right / 20px 100px no-repeat;
+    animation:rightMove 1s forwards;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    
+}
+
+.center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:30px;
+    height:30px;
+    background:black;
+    transform:translate(-50%,-50%) scale(0);
+    animation:centerSquare 1s forwards;
+}
+
+@keyframes leftMove{
+    0%{
+        transform:translate(-50%,-50%) translate(-95px,-70px) rotate(-50deg);
+    }
+
+    100%{
+        transform:translate(-50%,-50%) rotate(0deg);
+    }
+}
+
+@keyframes rightMove{
+    0%{
+        transform:translate(-50%,-50%) translate(55px,45px) rotate(-50deg);
+    }
+
+    100%{
+        transform:translate(-50%,-50%) rotate(0deg);
+    }
+}
+
+@keyframes centerSquare{
+    0%{
+        transform:translate(-50%,-50%) scale(0);
+    }
+
+    100%{
+        transform:translate(-50%,-50%) scale(2);
+    }
+}
